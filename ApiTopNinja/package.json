@@ -1,11 +1,11 @@
 {
-  "name": "api-radios",
+  "name": "api-ninjas",
   "version": "1.0.0",
-  "description": "Api radio form final project BBVA CELLS",
+  "description": "API Top 30 Ninjas",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "ssh://git@globaldevtools.bbva.com:7999/~nicolas.croce/api-radios.git"
+    "url": "https://github.com/NicoCroce/PolymerNinja"
   },
   "author": "Nicolás Croce",
   "license": "ISC",
