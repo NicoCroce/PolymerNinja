@@ -5,46 +5,19 @@
         <template>
             <style>
                 * { margin: 0; padding: 0; box-sizing: border-box; }
-                li { list-style: none; }
                 :host {
                     display: block;
                     max-width: 400px;
                     box-shadow: 0 1px 15px -5px black;
                     padding: 15px;
                 }
-                .card h1 { margin-bottom: 10px; }
-                .card ul li:not(:last-child) { margin-bottom: 5px; }
             </style>
-            <div class="card">
-                <h1>[[title]]</h1>
-                <ul>
-                    <li>[[desc1]]</li>
-                    <li>[[desc2]]</li>
-                    <li>[[desc3]]</li>
-                </ul>
-            </div>
+            <slot></slot>
+            <slot name="footerCard"></slot>
         </template>
         <script>
             class CardContainer extends Polymer.Element {
                 static get is() { return 'card-container'; }
-                static get properties() {
-                    return {
-                        title: String,
-                        desc1: {
-                            type: String,
-                            value: 'Desc 1'
-                        },
-                        desc2: {
-                            type: String,
-                            value: 'Desc 2'
-                        },
-                        desc3: {
-                            type: String,
-                            value: 'Desc 3'
-                        },
-                    }
-                }
-
             }
             customElements.define(CardContainer.is, CardContainer);
         </script>

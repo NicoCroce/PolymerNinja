@@ -12,11 +12,15 @@
 
     <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="import" href="/src/ninja-app/ninja-app.html">
-    <link rel="import" href="/src/card-container/card-container.html">
+    <link rel="import" href="./src/ninja-app/ninja-app.html">
+    <link rel="import" href="./src/card-container/card-container.html">
+    <link rel="import" href="./src/ninja-card/ninja-card.html">
   </head>
   <body>
     <ninja-app></ninja-app>
-    <card-container title="Nueva tarea"></card-container>
+    <card-container>
+      <ninja-card title="Nueva tarea"></ninja-card>
+      <p slot="footerCard">Este es el pie</p>
+    </card-container>
   </body>
 </html>
