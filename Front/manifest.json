@@ -1,0 +1,7 @@
+{
+  "name": "ninja",
+  "short_name": "ninja",
+  "description": "App de prueba",
+  "start_url": "/",
+  "display": "standalone"
+}

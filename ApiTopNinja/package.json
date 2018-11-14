@@ -1,0 +1,19 @@
+{
+  "name": "api-radios",
+  "version": "1.0.0",
+  "description": "Api radio form final project BBVA CELLS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@globaldevtools.bbva.com:7999/~nicolas.croce/api-radios.git"
+  },
+  "author": "Nicolás Croce",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
