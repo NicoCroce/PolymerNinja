@@ -19,4 +19,9 @@
 > https://github.com/NicoCroce/PolymerNinja/commit/2e8dfaa322f83c919f50af6a3b8dc4aa19fe0a18
 
 ##### 4) Agregar el componente iron-ajax
+- Se importa el componente y se consulta a la URL de lista de Ninjas
+
 > bower install --save PolymerElements/iron-ajax@2
+
+>https://github.com/NicoCroce/PolymerNinja/commit/84ca58047f96d4a21d8ed42b7da700a6c96e0e05
+

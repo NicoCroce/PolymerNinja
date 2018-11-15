@@ -1,5 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../card-container/card-container.html">
+<link rel="import" href="../ninja-card/ninja-card.html">
 
 <dom-module id="ninja-app">
   <template>
@@ -9,7 +11,17 @@
       }
     </style>
     <h1>TOP 30 Ninja</h1>
+    <slot></slot>
+
     <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" auto></iron-ajax>
+
+    <template is="dom-repeat" items="[[ninjaListTop.leaderBoard]]">
+      <card-container>
+        <ninja-card title="[[item.name]]" email="[[item.email]]" level="[[item.level]]" points="[[item.points]]" country="[[item.country]]"></ninja-card>
+        <a href="https://www.theninjaproject.bbva" target="_blank"  slot="footerCard">Ninja Project - BBVA</a>
+      </card-container>
+    </template>
+
   </template>
 
   <script>

@@ -9,17 +9,18 @@
                 li { list-style: none; }
                 .card h1 { margin-bottom: 10px; }
                 .card ul li:not(:last-child) { margin-bottom: 5px; }
-                paper-button { margin: 20px 0 }
+                paper-button { margin: 20px 0; display: block; text-align: center; }
             </style> 
             <div class="card">
                 <h1>[[title]]</h1>
                 <ul>
-                    <li>[[desc1]]</li>
-                    <li>[[desc2]]</li>
-                    <li>[[desc3]]</li>
+                    <li><span>email: </span>[[email]]</li>
+                    <li><span>level: </span>[[level]]</li>
+                    <li><span>points: </span>[[points]]</li>
+                    <li><span>country: </span>[[country]]</li>
                 </ul>
             </div>
-            <paper-button raised>ACEPTAR</paper-button>
+            <paper-button raised>Ver Perfil</paper-button>
         </template>
         <script>
             class NinjaCard extends Polymer.Element {
@@ -27,18 +28,19 @@
                 static get properties() {
                     return {
                         title: String,
-                        desc1: {
+                        email: {
                             type: String,
                             value: 'Desc 1'
                         },
-                        desc2: {
+                        level: {
                             type: String,
                             value: 'Desc 2'
                         },
-                        desc3: {
-                            type: String,
+                        points: {
+                            type: Number,
                             value: 'Desc 3'
                         },
+                        country: String
                     }
                 }
 
