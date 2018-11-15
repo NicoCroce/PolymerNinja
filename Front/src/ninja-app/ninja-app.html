@@ -2,6 +2,7 @@
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../card-container/card-container.html">
 <link rel="import" href="../ninja-card/ninja-card.html">
+<link rel="import" href="../../bower_components/paper-spinner/paper-spinner.html">
 
 <dom-module id="ninja-app">
   <template>
@@ -9,11 +10,14 @@
       :host {
         display: block;
       }
+      .spinner { display: block; margin: 0 auto; }
     </style>
     <h1>TOP 30 Ninja</h1>
     <slot></slot>
 
-    <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" auto></iron-ajax>
+    <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" loading="{{loading}}" auto></iron-ajax>
+    
+    <paper-spinner class="spinner" active="[[loading]]"></paper-spinner>
 
     <template is="dom-repeat" items="[[ninjaListTop.leaderBoard]]">
       <card-container>
@@ -36,6 +40,10 @@
           ninjaListTop: {
             type: Object,
             notyfy: true
+          },
+          loading: {
+            type: Boolean,
+            value: true
           }
         };
       }
