@@ -20,7 +20,7 @@
                     <li><span>country: </span>[[country]]</li>
                 </ul>
             </div>
-            <paper-button raised>Ver Perfil</paper-button>
+            <paper-button raised on-click="sendEvent">Ver Perfil</paper-button>
         </template>
         <script>
             class NinjaCard extends Polymer.Element {
@@ -40,10 +40,14 @@
                             type: Number,
                             value: 'Desc 3'
                         },
-                        country: String
+                        country: String,
+                        position: Number
                     }
                 }
 
+                sendEvent(){
+                    this.dispatchEvent(new CustomEvent('send-event', { composed: true, bubbles: true, detail:{ position: this.position } }));
+                }
             }
             customElements.define(NinjaCard.is, NinjaCard);
         </script>

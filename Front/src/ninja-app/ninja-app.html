@@ -10,19 +10,25 @@
       :host {
         display: block;
       }
-      .spinner { display: block; margin: 0 auto; }
+
+      .spinner {
+        display: block;
+        margin: 0 auto;
+      }
     </style>
     <h1>TOP 30 Ninja</h1>
     <slot></slot>
 
-    <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" loading="{{loading}}" auto></iron-ajax>
-    
+    <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" loading="{{loading}}"
+      auto></iron-ajax>
+
     <paper-spinner class="spinner" active="[[loading]]"></paper-spinner>
 
     <template is="dom-repeat" items="[[ninjaListTop.leaderBoard]]">
       <card-container>
-        <ninja-card title="[[item.name]]" email="[[item.email]]" level="[[item.level]]" points="[[item.points]]" country="[[item.country]]"></ninja-card>
-        <a href="https://www.theninjaproject.bbva" target="_blank"  slot="footerCard">Ninja Project - BBVA</a>
+        <ninja-card title="[[item.name]]" email="[[item.email]]" level="[[item.level]]" points="[[item.points]]"
+          country="[[item.country]]" position="[[item.position]]"></ninja-card>
+        <a href="https://www.theninjaproject.bbva" target="_blank" slot="footerCard">Ninja Project - BBVA</a>
       </card-container>
     </template>
 
@@ -46,6 +52,15 @@
             value: true
           }
         };
+      }
+      connectedCallback() {
+        super.connectedCallback();
+        this.addEventListener('send-event', (evt) => { console.log('la posición es:  ' + evt.detail.position) });
+      }
+
+      disconnectedCallback() {
+        super.disconnectedCallback();
+        this.removeEventListener('send-event');
       }
     }
 
