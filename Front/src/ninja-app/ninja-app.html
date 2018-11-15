@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 
 <dom-module id="ninja-app">
   <template>
@@ -7,7 +8,8 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <h1>TOP 30 Ninja</h1>
+    <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" auto></iron-ajax>
   </template>
 
   <script>
@@ -19,9 +21,9 @@
       static get is() { return 'ninja-app'; }
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'ninja-app'
+          ninjaListTop: {
+            type: Object,
+            notyfy: true
           }
         };
       }

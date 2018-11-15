@@ -17,3 +17,6 @@
 
 * Luego se importa y se usa en el componente NinjaCard.
 > https://github.com/NicoCroce/PolymerNinja/commit/2e8dfaa322f83c919f50af6a3b8dc4aa19fe0a18
+
+##### 4) Agregar el componente iron-ajax
+> bower install --save PolymerElements/iron-ajax@2
