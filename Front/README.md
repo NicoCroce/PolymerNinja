@@ -4,7 +4,7 @@
 > https://github.com/NicoCroce/PolymerNinja/commit/59c637f610ee95796219bb97eb3d1056e9cb2c7f
 
 
-##### 2) Se creó un nuevo componente contenedor de tipo CARD.
+
     * Se creó un nuevo componente que contiene las propiedades. 
     * Se agregó un SLOT a el contenedor para cargar el componente que tiene los datos llamado NinjaCard.
     * Se agregó un slot nuevo con nombre para mostrar la funcionalidad.
@@ -25,3 +25,11 @@
 
 >https://github.com/NicoCroce/PolymerNinja/commit/84ca58047f96d4a21d8ed42b7da700a6c96e0e05
 
+
+##### 5) Explicar dom-repeat
+
+* Se agregó el dom-repeat al template para que pueda iterar en cada uno de los elementos.
+* Se agregaron propiedades a NinjaCard para que ser reemplazadas por los valores de los atributos.
+* Se cambiaron algunos estilos.
+
+> https://github.com/NicoCroce/PolymerNinja/commit/e7958c9886787eb0bd295ad209d942aa1d6a47fa
