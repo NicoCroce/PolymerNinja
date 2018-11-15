@@ -1,25 +1,28 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 
 <dom-module id="card-container">
-    <dom-module id="componenet-id">
-        <template>
-            <style>
-                * { margin: 0; padding: 0; box-sizing: border-box; }
-                :host {
-                    display: block;
-                    max-width: 400px;
-                    box-shadow: 0 1px 15px -5px black;
-                    padding: 15px;
-                }
-            </style>
-            <slot></slot>
-            <slot name="footerCard"></slot>
-        </template>
-        <script>
-            class CardContainer extends Polymer.Element {
-                static get is() { return 'card-container'; }
+    <template>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-            customElements.define(CardContainer.is, CardContainer);
-        </script>
-    </dom-module>
+
+            :host {
+                display: block;
+                max-width: 400px;
+                box-shadow: 0 1px 15px -5px black;
+                padding: 15px;
+            }
+        </style>
+        <slot></slot>
+        <slot name="footerCard"></slot>
+    </template>
+    <script>
+        class CardContainer extends Polymer.Element {
+            static get is() { return 'card-container'; }
+        }
+        customElements.define(CardContainer.is, CardContainer);
+    </script>
 </dom-module>

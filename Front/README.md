@@ -1,33 +1,19 @@
-# \<ninja\>
+## Práctica Polymer 2
 
-App de prueba
+##### 1) Primer crear un componente CARD.
+> https://github.com/NicoCroce/PolymerNinja/commit/59c637f610ee95796219bb97eb3d1056e9cb2c7f
 
-## Install the Polymer-CLI
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+##### 2) Se creó un nuevo componente contenedor de tipo CARD.
+    * Se creó un nuevo componente que contiene las propiedades. 
+    * Se agregó un SLOT a el contenedor para cargar el componente que tiene los datos llamado NinjaCard.
+    * Se agregó un slot nuevo con nombre para mostrar la funcionalidad.
 
-## Viewing Your Application
+>https://github.com/NicoCroce/PolymerNinja/commit/9831e0f86d5cb194674ad3b5591d5c23fb9bc422
 
-```
-$ polymer serve
-```
+##### 3) Se agregó el componente **paper-button** con el comando
 
-## Building Your Application
+> bower install --save PolymerElements/paper-button@2
 
-```
-$ polymer build
-```
-
-This will create builds of your application in the `build/` directory, optimized to be served in production. You can then serve the built versions by giving `polymer serve` a folder to serve from:
-
-```
-$ polymer serve build/default
-```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+* Luego se importa y se usa en el componente NinjaCard.
+> https://github.com/NicoCroce/PolymerNinja/commit/2e8dfaa322f83c919f50af6a3b8dc4aa19fe0a18
