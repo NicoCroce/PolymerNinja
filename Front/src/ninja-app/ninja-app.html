@@ -10,18 +10,14 @@
       :host {
         display: block;
       }
-
-      .spinner {
-        display: block;
-        margin: 0 auto;
-      }
+      .spinner { display: block; margin: 0 auto; }
     </style>
     <h1>TOP 30 Ninja</h1>
     <slot></slot>
 
     <iron-ajax url="https://ninja-top.herokuapp.com/list-top" handle-as="json" last-response="{{ninjaListTop}}" loading="{{loading}}"
       auto></iron-ajax>
-
+    
     <paper-spinner class="spinner" active="[[loading]]"></paper-spinner>
 
     <template is="dom-repeat" items="[[ninjaListTop.leaderBoard]]">

@@ -31,3 +31,15 @@
 * Se cambiaron algunos estilos.
 
 > https://github.com/NicoCroce/PolymerNinja/commit/e7958c9886787eb0bd295ad209d942aa1d6a47fa
+
+##### 6) Explicar spinner como componente
+
+- Se agregó el componente de spinner
+
+> https://github.com/NicoCroce/PolymerNinja/commit/f302ef216204f4316c3cec9cf32ee66cc921478c
+
+##### 7) Eventos
+
+- Se agregaron eventos para ver la comunicación entre componentes.
+
+> https://github.com/NicoCroce/PolymerNinja/commit/6b0ab8ef104d85562432c7e96fd6be242b922543
